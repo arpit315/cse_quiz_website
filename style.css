@@ -1,14 +1,12 @@
 :root {
-  /* Color Palette - Premium Dark Theme */
   --bg-primary: #0F172A;
   --bg-secondary: #1E293B;
   --bg-card: rgba(30, 41, 59, 0.7);
   --text-main: #F8FAFC;
   --text-muted: #94A3B8;
   
-  /* Accents & Gradients */
-  --accent-primary: #6366F1; /* Indigo */
-  --accent-secondary: #8B5CF6; /* Violet */
+  --accent-primary: #6366F1;
+  --accent-secondary: #8B5CF6;
   --accent-gradient: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
   --dbms-gradient: linear-gradient(135deg, #10B981, #059669);
   --oops-gradient: linear-gradient(135deg, #F59E0B, #D97706);
@@ -16,12 +14,10 @@
   --cn-gradient: linear-gradient(135deg, #EC4899, #DB2777);
   --dsa-gradient: linear-gradient(135deg, #8B5CF6, #7C3AED);
 
-  /* Status Colors */
   --success: #10B981;
   --error: #EF4444;
   --warning: #F59E0B;
 
-  /* UI Elements */
   --radius-lg: 16px;
   --radius-md: 12px;
   --radius-sm: 8px;
@@ -47,7 +43,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Base App Container */
 #app {
   width: 100%;
   max-width: 800px;
@@ -55,7 +50,6 @@ body {
   position: relative;
 }
 
-/* Screen Management */
 .screen {
   display: none;
   opacity: 0;
@@ -74,13 +68,13 @@ body {
   }
 }
 
-/* Typography */
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 8px;
   background: var(--accent-gradient);
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   text-align: center;
 }
@@ -97,13 +91,11 @@ p {
   line-height: 1.6;
 }
 
-/* Home Header */
 .home-header {
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* Subject Cards (Grid Layout) */
 .subjects-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -164,7 +156,6 @@ p {
 .cn-icon { background: var(--cn-gradient); }
 .dsa-icon { background: var(--dsa-gradient); }
 
-/* Quiz Screen Elements */
 .quiz-header {
   display: flex;
   justify-content: space-between;
@@ -246,7 +237,6 @@ p {
   line-height: 1.4;
 }
 
-/* Options */
 .options-container {
   display: flex;
   flex-direction: column;
@@ -295,7 +285,6 @@ p {
   opacity: 0.8;
 }
 
-/* Footer & Buttons */
 .quiz-footer {
   display: flex;
   justify-content: flex-end;
@@ -344,7 +333,6 @@ p {
   background: rgba(255, 255, 255, 0.05);
 }
 
-/* Result Screen */
 .result-card {
   background: var(--bg-card);
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -382,7 +370,6 @@ p {
   justify-content: center;
 }
 
-/* Welcome Screen Styling */
 .welcome-card {
   max-width: 400px;
   margin: 0 auto;
@@ -420,7 +407,6 @@ p {
   opacity: 0.5;
 }
 
-/* Mobile Responsiveness */
 @media (max-width: 600px) {
   h1 { font-size: 2rem; }
   .quiz-content { padding: 24px 16px; }

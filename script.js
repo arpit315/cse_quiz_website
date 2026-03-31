@@ -1,4 +1,3 @@
-/* Subject Titles */
 const subjectTitles = {
     dbms: "Database Management Systems",
     oops: "Object Oriented Programming",
@@ -7,49 +6,42 @@ const subjectTitles = {
     dsa: "Data Structures & Algorithms"
 };
 
-/* DOM Elements */
 const welcomeScreen = document.getElementById('welcome-screen');
 const homeScreen = document.getElementById('home-screen');
 const quizScreen = document.getElementById('quiz-screen');
 const resultScreen = document.getElementById('result-screen');
 
-// Welcome screen elements
 const userNameInput = document.getElementById('user-name-input');
 const startBtn = document.getElementById('start-btn');
 const displayName = document.getElementById('display-name');
 
-// Header elements
 const quizSubjectTitle = document.getElementById('quiz-subject-title');
 const timeLeftEl = document.getElementById('time-left');
 const timerBadge = document.querySelector('.timer-badge');
 const quitBtn = document.getElementById('quit-btn');
 
-// Quiz body elements
 const progressBar = document.getElementById('progress-bar');
 const progressText = document.getElementById('progress-text');
 const questionText = document.getElementById('question-text');
 const optionsContainer = document.getElementById('options-container');
 const nextBtn = document.getElementById('next-btn');
 
-// Result elements
 const scoreText = document.getElementById('score-text');
 const performanceMessage = document.getElementById('performance-message');
 const scoreCircle = document.querySelector('.score-circle');
 const restartBtn = document.getElementById('restart-btn');
 const homeBtn = document.getElementById('home-btn');
 
-/* State Variables */
 let userName = 'User';
 let currentSubject = '';
 let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 let timer = null;
-const TIME_LIMIT = 15; // seconds per question
+const TIME_LIMIT = 15;
 let timeLeft = TIME_LIMIT;
 let selectedOptionIndex = null;
 
-/* Audio Effects */
 function playSound(isCorrect) {
     try {
         const osc = new (window.AudioContext || window.webkitAudioContext)();
@@ -57,7 +49,7 @@ function playSound(isCorrect) {
         const gainNode = osc.createGain();
         
         oscillator.type = isCorrect ? 'sine' : 'sawtooth';
-        oscillator.frequency.value = isCorrect ? 800 : 200; 
+        oscillator.frequency.value = isCorrect ? 800 : 200;
         
         gainNode.gain.setValueAtTime(0.1, osc.currentTime);
         gainNode.gain.exponentialRampToValueAtTime(0.001, osc.currentTime + 0.3);
@@ -72,7 +64,6 @@ function playSound(isCorrect) {
     }
 }
 
-/* Event Listeners */
 startBtn.addEventListener('click', () => {
     const name = userNameInput.value.trim();
     if (name) {
@@ -118,7 +109,6 @@ nextBtn.addEventListener('click', () => {
     }
 });
 
-/* Core Functions */
 function startQuiz(subject) {
     currentSubject = subject;
     questions = questionBank[subject];
@@ -161,7 +151,7 @@ function loadQuestion() {
 }
 
 function selectOption(index, btnElement) {
-    if (selectedOptionIndex !== null) return; 
+    if (selectedOptionIndex !== null) return;
     
     clearInterval(timer);
     selectedOptionIndex = index;

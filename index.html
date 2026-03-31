@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSE Interview Quiz Portal</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Main Stylesheet -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div id="app">
-        <!-- Welcome Screen -->
         <main id="welcome-screen" class="screen active">
             <header class="home-header">
                 <h1>Welcome to CSE Quiz</h1>
@@ -23,7 +20,6 @@
             </div>
         </main>
 
-        <!-- Home Screen -->
         <main id="home-screen" class="screen hide">
             <header class="home-header">
                 <h1>CSE Interview Quiz Portal</h1>
@@ -59,7 +55,6 @@
             </section>
         </main>
 
-        <!-- Quiz Screen -->
         <main id="quiz-screen" class="screen hide">
             <header class="quiz-header">
                 <button id="quit-btn" class="icon-btn">❌ Quit</button>
@@ -76,7 +71,6 @@
                 <h3 id="question-text" class="question-text">Loading question...</h3>
                 
                 <div id="options-container" class="options-container">
-                    <!-- Options will be dynamically injected here -->
                 </div>
             </div>
 
@@ -85,7 +79,6 @@
             </footer>
         </main>
 
-        <!-- Result Screen -->
         <main id="result-screen" class="screen hide">
             <div class="result-card">
                 <h2>Quiz Completed!</h2>
@@ -102,7 +95,6 @@
         </main>
     </div>
 
-    <!-- Extra features: Canvas Confetti from CDN -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <script src="questions.js"></script>
     <script src="script.js"></script>
