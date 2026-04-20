@@ -18,15 +18,15 @@
 ### 🖥️ EC2 Instance (Admin Access)
 
 * Shows running instance with public details
-  ![EC2 Screenshot](./Screenshot 2026-04-20 141958.png)
+  ![EC2 Screenshot](./ec2.png)
 
 ---
 
 ### 🔐 IAM User 1 (No Access)
 
 * User: `user-no-access`
-* Result: ❌ Cannot access EC2 services
-  ![EC2 Screenshot](./Screenshot 2026-04-20 143124.png)
+* Result:  Cannot access EC2 services
+  ![EC2 Screenshot](./user1.png)
 
 ---
 
@@ -34,9 +34,8 @@
 
 * User: `fullaccess`
 * Policy: `AmazonEC2FullAccess`
-* Result: ✅ Can view EC2 instances
- ![EC2 Screenshot](./Screenshot 2026-04-20 142902.png)
-
+* Result:  Can view EC2 instances
+ ![EC2 Screenshot](./user2.png)
 
 ## ⚠️ Challenges Faced
 
